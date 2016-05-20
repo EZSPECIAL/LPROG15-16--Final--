@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pantry:Pantry xmlns:pantry="http://isep.ipp.pt/1151007"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="trabalho.xsd">
+	<pantry:Category>
+		<pantry:CategoryName>Vegetables</pantry:CategoryName>
+		<pantry:Product>Leek</pantry:Product>
+	</pantry:Category>
+	
+	<pantry:Category>
+		<pantry:CategoryName>Meat</pantry:CategoryName>
+		<pantry:Product>Veal</pantry:Product>
+	</pantry:Category>
+</pantry:Pantry>

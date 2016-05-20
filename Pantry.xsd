@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:pantry="http://isep.ipp.pt/1151007"
+		targetNamespace="http://isep.ipp.pt/1151007"
+		elementFormDefault="qualified">
+
+	<xs:complexType name="CategoryType">
+		<xs:sequence>
+			<xs:element name="CategoryName" type="xs:string"/>
+			<xs:element name="Product" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PantryType">
+		<xs:sequence>
+			<xs:element name="Category" type="pantry:CategoryType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="Pantry" type="pantry:PantryType"/>
+</xs:schema>
