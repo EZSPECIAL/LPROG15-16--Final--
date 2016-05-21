@@ -59,9 +59,56 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="ValueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="Size" type="xs:decimal" use="required"/>
+				<xs:attribute name="Units" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="PriceType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Value" type="pantry:ValueType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="IngredientsType">
+		<xs:sequence>
+			<xs:element name="IngredientName" type="xs:string"/>
+			<xs:element name="Stock" type="pantry:StockType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RecipeType">
+		<xs:sequence>
+			<xs:element name="RecipeName" type="xs:string"/>
+			<xs:element name="Ingredients" type="pantry:IngredientsType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="PreparationT" type="xs:time" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="MealsType">
+		<xs:sequence>
+			<xs:element name="MealName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="WeekNumber" type="xs:ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="ExpenditureType">
+		<xs:sequence>
+			<xs:element name="Meals" type="pantry:MealsType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="PantryType">
 		<xs:sequence>
 			<xs:element name="Category" type="pantry:CategoryType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Price" type="pantry:PriceType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Recipe" type="pantry:RecipeType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Expenditure" type="pantry:ExpenditureType"/>
 		</xs:sequence>
 	</xs:complexType>
 
