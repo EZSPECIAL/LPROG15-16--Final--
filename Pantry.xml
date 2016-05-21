@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <pantry:Pantry xmlns:pantry="http://isep.ipp.pt/1151007"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="trabalho.xsd">
+               xsi:noNamespaceSchemaLocation="pantry.xsd">
 	<pantry:Category>
 		<pantry:CategoryName>Vegetables</pantry:CategoryName>
-		<pantry:Product>Leek</pantry:Product>
+		<pantry:Product>
+			<pantry:ProductName>Leek</pantry:ProductName>
+			<pantry:Stock Units="kg">1.0</pantry:Stock>
+			<pantry:ExpiryDate>2015-03-24</pantry:ExpiryDate>
+			<pantry:Location>Pantry Shelf</pantry:Location>
+		</pantry:Product>
+
+		<pantry:Product>
+			<pantry:ProductName>Leek</pantry:ProductName>
+			<pantry:Stock Units="kg">1.0</pantry:Stock>
+			<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
+			<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+		</pantry:Product>
 	</pantry:Category>
-	
+
 	<pantry:Category>
 		<pantry:CategoryName>Meat</pantry:CategoryName>
-		<pantry:Product>Veal</pantry:Product>
+		<pantry:Product>
+			<pantry:ProductName>Veal</pantry:ProductName>
+			<pantry:Stock Units="kg">2.0</pantry:Stock>
+			<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
+			<pantry:Location IsCold="true">Fridge</pantry:Location>
+		</pantry:Product>
 	</pantry:Category>
 </pantry:Pantry>

@@ -1,0 +1,26 @@
+Stock -> Units (required)
+ExpiryDate -> DateFormat (optional, default ISO 8601)
+Value -> Size (required)
+Location -> IsCold? (optional, default false)
+Quantity -> Units (required)
+Expenditure -> WeekNumber (required)
+
+DUVIDAS:
+- preocupar com default em elements? (expiryDate, Stock)
+- enumeration para Location?
+- permitir string vazia em xsd:string? (Product Name, Category Name)
+- restriçoes xslt usando xsd ou direto?
+
+
+
+local (frigorifico, congelador, despensa (varias), gaveta, etc)
+lista compras -> refeiçao (conjunto de pratos)
+prejuizo caso produto fora de prazo
+
+1 XML -> 100-500
+1 XSD
+? XSLT
+	- XML -> XML
+	- XML -> HTML
+	
+evitar for each

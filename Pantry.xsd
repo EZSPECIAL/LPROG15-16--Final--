@@ -5,10 +5,57 @@
 		targetNamespace="http://isep.ipp.pt/1151007"
 		elementFormDefault="qualified">
 
+	<xs:complexType name="StockType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="Units" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="DateType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{4}-(0[0-9]|1[0-2])-([0-2][0-9]|3[0-1])|([0-2][0-9]|3[0-1])-(0[0-9]|1[0-2])-[0-9]{4}|(0[0-9]|1[0-2])-([0-2][0-9]|3[0-1])-[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="FormatType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ISO8601"/>
+			<xs:enumeration value="DD-MM-YYYY"/>
+			<xs:enumeration value="MM-DD-YYYY"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="ExpiryType">
+		<xs:simpleContent>
+			<xs:extension base="pantry:DateType">
+				<xs:attribute name="DateFormat" type="pantry:FormatType" use="optional" default="ISO8601"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="LocationType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="IsCold" type="xs:boolean" use="optional" default="false"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="ProductType">
+		<xs:sequence>
+			<xs:element name="ProductName" type="xs:string"/>
+			<xs:element name="Stock" type="pantry:StockType"/>
+			<xs:element name="ExpiryDate" type="pantry:ExpiryType"/>
+			<xs:element name="Location" type="pantry:LocationType"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="CategoryType">
 		<xs:sequence>
 			<xs:element name="CategoryName" type="xs:string"/>
-			<xs:element name="Product" type="xs:string"/>
+			<xs:element name="Product" type="pantry:ProductType" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 
