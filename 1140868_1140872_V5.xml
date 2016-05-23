@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stockDomestico >
+	<dispensa>
+		<categorias>
+			<categoria>
+				<nome>Laticinios</nome>
+				<artigos>
+					<artigo marca="Agros"
+					        cod_barras="200">
+						<imagem url=""/>
+						<nome>Leite Meio Gordo</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo> 
+
+					<artigo marca="Agros"
+					        cod_barras="200">
+						<imagem url=""/>
+						<nome>Bacalhau</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo> 
+
+					<artigo marca="Agros"
+					        cod_barras="201">
+						<imagem url=""/>
+						<nome>Leite Gordo</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+
+					<artigo marca="Danone"
+					        cod_barras="202">
+						<imagem url="data:image/jpeg;base64,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"/>
+						<nome>Iogurte Morango</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo> 
+					<artigo marca="Danone"
+					        cod_barras="203">
+						<imagem url="data:image/jpeg;base64,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"/>
+						<nome>Iogurte Morango/Banana</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo> 
+				</artigos>
+			</categoria>
+			<categoria>
+				<nome>Congelados</nome>
+				<artigos>
+					<artigo marca="Continente"
+					        cod_barras="101">
+						<imagem url="im1.jpg"/>
+						<nome>Lombos de Salmão</nome>
+						<data_validade>2016-09-22</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+										<artigo marca="Continente"
+					        cod_barras="101">
+						<imagem url="im1.jpg"/>
+						<nome>Lombos de Salmão</nome>
+						<data_validade>2016-09-22</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Iglo"
+					        cod_barras="102">
+						<imagem url="im1.jpg"/>
+						<nome>Lombos Pescada Ultracongelados</nome>
+						<data_validade>2019-10-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="103">
+						<imagem url=""/>
+						<nome>Tentáculos de Pota Cozidos Congelados</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="104">
+						<imagem url=""/>
+						<nome>Petit Gateau Chocolate</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+										<artigo marca="Continente"
+					        cod_barras="104">
+						<imagem url=""/>
+						<nome>Petit Gateau Chocolate</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+										<artigo marca="Continente"
+					        cod_barras="104">
+						<imagem url=""/>
+						<nome>Petit Gateau Chocolate</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+				</artigos>
+			</categoria>
+			<categoria>
+				<nome>Mercearia</nome>
+				<artigos>
+					<artigo marca="Diese"
+					        cod_barras="301">
+						<imagem url=""/>
+						<nome>Sementes de Abóbora</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+										<artigo marca="Diese"
+					        cod_barras="301">
+						<imagem url=""/>
+						<nome>Sementes de Abóbora</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Gullón"
+					        cod_barras="302">
+						<imagem url=""/>
+						<nome>Bolachas Maria Dorada</nome>
+						<data_validade>2017-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>6</quantidade>
+					</artigo>
+					<artigo marca="Regina"
+					        cod_barras="303">
+						<imagem url=""/>
+						<nome>Tablete Chocolate com Recheio Creme Leite R'Size</nome>
+						<data_validade>2016-09-22</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Área Gourmet"
+					        cod_barras="304">
+						<imagem url=""/>
+						<nome>Tablete Chocolate Negro Cacau Michel Cluizel</nome>
+						<data_validade>2025-12-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Nestlé"
+					        cod_barras="305">
+						<imagem url=""/>
+						<nome>Tablete Chocolate Mini Crunch</nome>
+						<data_validade>2017-01-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="306">
+						<imagem url=""/>
+						<nome>Arroz Thai Jasmin</nome>
+						<data_validade>2018-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>10</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="307">
+						<imagem url=""/>
+						<nome>Azeite Virgem</nome>
+						<data_validade>2017-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>4</quantidade>
+					</artigo>
+					<artigo marca="Koala"
+					        cod_barras="308">
+						<imagem url=""/>
+						<nome>Polpa Manga</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Triunfo"
+					        cod_barras="309">
+						<imagem url=""/>
+						<nome>Bolacha Digestive</nome>
+						<data_validade>2025-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Continente Equilíbrio"
+					        cod_barras="310">
+						<imagem url=""/>
+						<nome>Atum em Óleo - 25% Sal</nome>
+						<data_validade>2018-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="La Piara"
+					        cod_barras="311">
+						<imagem url=""/>
+						<nome>Patê Gambas</nome>
+						<data_validade>2019-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>6</quantidade>
+					</artigo>
+					<artigo marca="Nobre"
+					        cod_barras="312">
+						<imagem url=""/>
+						<nome>Salsichas Frankfurt Originais</nome>
+						<data_validade>2017-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Ramirez"
+					        cod_barras="313">
+						<imagem url=""/>
+						<nome>Sardinhas em Óleo Vegetal</nome>
+						<data_validade>2020-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>9</quantidade>
+					</artigo>
+					<artigo marca="DanCake"
+					        cod_barras="314">
+						<imagem url=""/>
+						<nome>Croissant Chocolate</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Bonduelle"
+					        cod_barras="315">
+						<imagem url=""/>
+						<nome>Bonduelle</nome>
+						<data_validade>2021-11-04</data_validade>
+						<local nome="despensa"/>
+						<quantidade>3</quantidade>
+					</artigo>
+					<artigo marca="Cerelac"
+					        cod_barras="316">
+						<imagem url=""/>
+						<nome>Farinha Láctea</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Milaneza"
+					        cod_barras="317">
+						<imagem url=""/>
+						<nome>Massa Laços</nome>
+						<data_validade>2018-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>12</quantidade>
+					</artigo>
+				</artigos>
+			</categoria>
+			<categoria>
+				<nome>Bebidas</nome>
+				<artigos>
+					<artigo marca="Alecrim"
+					        cod_barras="401">
+						<imagem url=""/>
+						<nome>Alecrim Branco</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="Armario do Vinho"/>
+						<quantidade>3</quantidade>
+					</artigo>
+					<artigo marca="Mula Velha"
+					        cod_barras="402">
+						<imagem url=""/>
+						<nome>Vinho Tinto Lisboa</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="Armario do Vinho"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Caldas Penacova"
+					        cod_barras="403">
+						<imagem url=""/>
+						<nome>Água sem Gás</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>12</quantidade>
+					</artigo>
+					<artigo marca="Somersby"
+					        cod_barras="404">
+						<imagem url=""/>
+						<nome>Sidra com Álcool Citrus</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>4</quantidade>
+					</artigo>
+					<artigo marca="Gud"
+					        cod_barras="405">
+						<imagem url=""/>
+						<nome>Concentrado Laranja / Manga</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="despensa"/>
+						<quantidade>7</quantidade>
+					</artigo>
+					<artigo marca="Joi"
+					        cod_barras="406">
+						<imagem url=""/>
+						<nome>Refrigerante sem Gás Manga / Laranja</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>4</quantidade>
+					</artigo>
+					<artigo marca="Um Bongo"
+					        cod_barras="407">
+						<imagem url=""/>
+						<nome>Nectar Laranja</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>5</quantidade>
+					</artigo>
+					<artigo marca="Um Bongo"
+					        cod_barras="408">
+						<imagem url=""/>
+						<nome>Nectar 8 Frutos</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>5</quantidade>
+					</artigo>
+					<artigo marca="Compal"
+					        cod_barras="409">
+						<imagem url=""/>
+						<nome>Néctar Light Manga/Laranja</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo>
+				</artigos>
+			</categoria>
+			<categoria>
+				<nome>Frescos</nome>
+				<artigos>
+					<artigo marca="Igp Açores"
+					        cod_barras="501">
+						<imagem url=""/>
+						<nome>Novilho Bife do Dianteiro</nome>
+						<data_validade>2016-03-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Igp Açores"
+					        cod_barras="502">
+						<imagem url=""/>
+						<nome>Novilho Bife Lombo</nome>
+						<data_validade>2016-04-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="503">
+						<imagem url=""/>
+						<nome>Abacaxi Sweet Gold</nome>
+						<data_validade>2016-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Vitacress"
+					        cod_barras="504">
+						<imagem url=""/>
+						<nome>Coentro Lavado</nome>
+						<data_validade>2017-08-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="505">
+						<imagem url=""/>
+						<nome>Porco Costeletas Embalagem Familiar</nome>
+						<data_validade>2017-05-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Iglo"
+					        cod_barras="506">
+						<imagem url=""/>
+						<nome>Postas Pescada Nº 5 para Cozer Ultracongeladas</nome>
+						<data_validade>2018-06-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="507">
+						<imagem url=""/>
+						<nome>Porco Bifinhos do Lombo</nome>
+						<data_validade>2019-02-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>3</quantidade>
+					</artigo>
+					<artigo marca="Iglo"
+					        cod_barras="508">
+						<imagem url=""/>
+						<nome>Tranches Salmão Selvagem Ultracongelados</nome>
+						<data_validade>2014-03-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>8</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="509">
+						<imagem url=""/>
+						<nome>Alface Frisada</nome>
+						<data_validade>2016-01-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>6</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="510">
+						<imagem url=""/>
+						<nome>Pimento Verde</nome>
+						<data_validade>2019-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>9</quantidade>
+					</artigo>
+					<artigo marca="Confeitaria Torres"
+					        cod_barras="511">
+						<imagem url=""/>
+						<nome>Brioche</nome>
+						<data_validade>2013-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Shake Snack Mirtilo"
+					        cod_barras="512">
+						<imagem url=""/>
+						<nome>Shake Snack Mirtilo</nome>
+						<data_validade>2016-10-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo>
+					<artigo marca="Continente"
+					        cod_barras="513">
+						<imagem url=""/>
+						<nome>Tentáculos de Pota Cozidos Congelados</nome>
+						<data_validade>2015-12-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>1</quantidade>
+					</artigo>
+					<artigo marca="Continente" cod_barras="513">
+						<imagem url=""/>
+						<nome>batata</nome>
+						<data_validade>2015-12-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>4</quantidade>
+					</artigo>
+					
+					<artigo marca="Continente"
+					        cod_barras="514">
+						<imagem url=""/>
+						<nome>Dourada Media (200-600 gr) Amanhada</nome>
+						<data_validade>2015-09-12</data_validade>
+						<local nome="frigorifico"/>
+						<quantidade>2</quantidade>
+					</artigo>
+				</artigos>
+			</categoria>  
+		</categorias>
+	</dispensa> 
+	<receitas>
+		<receita nome="Bacalhau á brás">
+			<produtos>
+				<produto>
+					<nomeProduto>Bacalhau</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto>
+					<nomeProduto>batata</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto>
+					<nomeProduto>cebola</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+			</produtos>
+		</receita>
+		<receita nome="Carne de porco à Alentejana">
+			<produtos>
+				<produto> 
+					<nomeProduto>carne de porco</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>cebola</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>dente(s) de alho</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>sopa de massa de pimentão</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>tomate</nomeProduto>
+					<quantidade>4</quantidade>
+				</produto> 
+				<produto> 
+					<nomeProduto>c. sopa banha</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>amêijoa</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>coentros</nomeProduto>
+					<quantidade>4</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>sal</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>Pimenta</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto> dl vinho branco</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>folha(s) de louro</nomeProduto>
+					<quantidade>1</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>cravinho (cravo-da-índia)</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+				<produto> 
+					<nomeProduto>dente(s) de alho</nomeProduto>
+					<quantidade>2</quantidade>
+				</produto>
+			</produtos>
+		</receita>
+	</receitas>
+	<precos>
+		<artigo preco="4.36">
+			<nomeProduto>Tablete Chocolate Negro Cacau Michel Cluizel</nomeProduto>
+			<tipoUnidade>3</tipoUnidade>
+		</artigo> 
+		<artigo preco="2.08">
+			<nomeProduto>Bolacha Digestive</nomeProduto>
+			<tipoUnidade>3</tipoUnidade>
+		</artigo> 
+		<artigo preco="5.45">
+			<nomeProduto>Farinha Láctea</nomeProduto>
+			<tipoUnidade>1</tipoUnidade>
+		</artigo>
+		<artigo preco="7.45">
+			<nomeProduto>Lombos Pescada Ultracongelados</nomeProduto>
+			<tipoUnidade>1</tipoUnidade>
+		</artigo>
+		<artigo preco="10.22">
+			<nomeProduto>Lombos de Salmão</nomeProduto>
+			<tipoUnidade>4</tipoUnidade>
+		</artigo>
+		<artigo preco="1.79">
+			<nomeProduto>Sementes de Abóbora</nomeProduto>
+			<tipoUnidade>2</tipoUnidade>
+		</artigo>
+		<artigo preco="1.99">
+			<nomeProduto>Alecrim Branco</nomeProduto>
+			<tipoUnidade>4</tipoUnidade>
+		</artigo>
+		<artigo preco="1.21">
+			<nomeProduto>Nectar Laranja</nomeProduto>
+			<tipoUnidade>12</tipoUnidade>
+		</artigo>
+		<artigo preco="1.17">
+			<nomeProduto>Nectar 8 Frutos</nomeProduto>
+			<tipoUnidade>2</tipoUnidade>
+		</artigo>
+		<artigo preco="0.86">
+			<nomeProduto>Abacaxi Sweet Gold</nomeProduto>
+			<tipoUnidade>2.322</tipoUnidade>
+		</artigo>
+		<artigo preco="9.44">
+			<nomeProduto>Dourada Media (200-600 gr) Amanhada</nomeProduto>
+			<tipoUnidade>12.7</tipoUnidade>
+		</artigo>
+		<artigo preco="0.22">
+			<nomeProduto>Brioche</nomeProduto>
+			<tipoUnidade>2</tipoUnidade>
+		</artigo>
+				<artigo preco="1.55">
+			<nomeProduto>Tentáculos de Pota Cozidos Congelados</nomeProduto>
+			<tipoUnidade>2</tipoUnidade>
+		</artigo>
+				<artigo preco="3.25">
+			<nomeProduto>Petit Gateau Chocolate</nomeProduto>
+			<tipoUnidade>2</tipoUnidade>
+		</artigo>
+	</precos>
+</stockDomestico>

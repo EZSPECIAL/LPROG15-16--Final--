@@ -19,7 +19,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="FormatType">
+	<xs:simpleType name="DateFormatType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ISO8601"/>
 			<xs:enumeration value="DD-MM-YYYY"/>
@@ -30,7 +30,7 @@
 	<xs:complexType name="ExpiryType">
 		<xs:simpleContent>
 			<xs:extension base="pantry:DateType">
-				<xs:attribute name="DateFormat" type="pantry:FormatType" use="optional" default="ISO8601"/>
+				<xs:attribute name="DateFormat" type="pantry:DateFormatType" use="optional" default="ISO8601"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -59,6 +59,12 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="CategoriesType">
+		<xs:sequence>
+			<xs:element name="Category" type="pantry:CategoryType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="ValueType">
 		<xs:simpleContent>
 			<xs:extension base="xs:decimal">
@@ -70,8 +76,14 @@
 
 	<xs:complexType name="PriceType">
 		<xs:sequence>
-			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="PriceName" type="xs:string"/>
 			<xs:element name="Value" type="pantry:ValueType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PricesType">
+		<xs:sequence>
+			<xs:element name="Price" type="pantry:PriceType" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -90,6 +102,12 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="RecipesType">
+		<xs:sequence>
+			<xs:element name="Recipe" type="pantry:RecipeType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="MealsType">
 		<xs:sequence>
 			<xs:element name="MealName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
@@ -103,12 +121,42 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:simpleType name="URLFormatType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DataURI"/> <!-- base64 encoded embeded image file -->
+			<xs:enumeration value="LocalFile"/> <!-- relative path to file on local disk -->
+			<xs:enumeration value="URI"/> <!-- resource on server -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="URLType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="URLFormat" type="pantry:URLFormatType" use="optional" default="DataURI"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="ImageType">
+		<xs:sequence>
+			<xs:element name="ImageName" type="xs:string"/>
+			<xs:element name="URL" type="pantry:URLType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ImagesType">
+		<xs:sequence>
+			<xs:element name="Image" type="pantry:ImageType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="PantryType">
 		<xs:sequence>
-			<xs:element name="Category" type="pantry:CategoryType" minOccurs="1" maxOccurs="unbounded"/>
-			<xs:element name="Price" type="pantry:PriceType" minOccurs="1" maxOccurs="unbounded"/>
-			<xs:element name="Recipe" type="pantry:RecipeType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Categories" type="pantry:CategoriesType"/>
+			<xs:element name="Prices" type="pantry:PricesType"/>
+			<xs:element name="Recipes" type="pantry:RecipesType"/>
 			<xs:element name="Expenditure" type="pantry:ExpenditureType"/>
+			<xs:element name="Images" type="pantry:ImagesType"/>
 		</xs:sequence>
 	</xs:complexType>
 

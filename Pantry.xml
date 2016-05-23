@@ -1,106 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <pantry:Pantry xmlns:pantry="http://isep.ipp.pt/1151007"
-               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="pantry.xsd">
-	<pantry:Category>
-		<pantry:CategoryName>Vegetables</pantry:CategoryName>
-		<pantry:Product>
-			<pantry:ProductName>Leek</pantry:ProductName>
-			<pantry:Stock Units="kg">1.5</pantry:Stock>
-			<pantry:ExpiryDate>2015-03-24</pantry:ExpiryDate>
-			<pantry:Location>Pantry Shelf</pantry:Location>
-		</pantry:Product>
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://isep.ipp.pt/1151007 Pantry.xsd">
 
-		<pantry:Product>
-			<pantry:ProductName>Leek</pantry:ProductName>
-			<pantry:Stock Units="kg">3.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
-		</pantry:Product>
+	<pantry:Categories>
+		<pantry:Category>
+			<pantry:CategoryName>Vegetables</pantry:CategoryName>
+			<pantry:Product>
+				<pantry:ProductName>Leek</pantry:ProductName>
+				<pantry:Stock Units="kg">1.5</pantry:Stock>
+				<pantry:ExpiryDate>2015-03-24</pantry:ExpiryDate>
+				<pantry:Location>Pantry Shelf</pantry:Location>
+			</pantry:Product>
 
-		<pantry:Product>
-			<pantry:ProductName>Radish</pantry:ProductName>
-			<pantry:Stock Units="kg">5.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
-		</pantry:Product>
+			<pantry:Product>
+				<pantry:ProductName>Leek</pantry:ProductName>
+				<pantry:Stock Units="kg">3.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+			</pantry:Product>
 
-		<pantry:Product>
-			<pantry:ProductName>Leek</pantry:ProductName>
-			<pantry:Stock Units="kg">1.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
-		</pantry:Product>
-	</pantry:Category>
+			<pantry:Product>
+				<pantry:ProductName>Radish</pantry:ProductName>
+				<pantry:Stock Units="kg">5.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+			</pantry:Product>
 
-	<pantry:Category>
-		<pantry:CategoryName>Meat</pantry:CategoryName>
-		<pantry:Product>
-			<pantry:ProductName>Pork</pantry:ProductName>
-			<pantry:Stock Units="kg">3.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="true">Fridge</pantry:Location>
-		</pantry:Product>
+			<pantry:Product>
+				<pantry:ProductName>Leek</pantry:ProductName>
+				<pantry:Stock Units="kg">1.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+			</pantry:Product>
+		</pantry:Category>
 
-		<pantry:Product>
-			<pantry:ProductName>Veal</pantry:ProductName>
-			<pantry:Stock Units="kg">2.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="true">Fridge</pantry:Location>
-		</pantry:Product>
+		<pantry:Category>
+			<pantry:CategoryName>Meat</pantry:CategoryName>
+			<pantry:Product>
+				<pantry:ProductName>Pork</pantry:ProductName>
+				<pantry:Stock Units="kg">3.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="true">Fridge</pantry:Location>
+			</pantry:Product>
 
-		<pantry:Product>
-			<pantry:ProductName>Pork</pantry:ProductName>
-			<pantry:Stock Units="kg">3.0</pantry:Stock>
-			<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
-			<pantry:Location IsCold="true">Fridge</pantry:Location>
-		</pantry:Product>
-	</pantry:Category>
+			<pantry:Product>
+				<pantry:ProductName>Veal</pantry:ProductName>
+				<pantry:Stock Units="kg">2.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="true">Fridge</pantry:Location>
+			</pantry:Product>
 
-	<pantry:Price>
-		<pantry:Name>Leek</pantry:Name>
-		<pantry:Value Size="1.0" Units="kg">20.0</pantry:Value>
-	</pantry:Price>
+			<pantry:Product>
+				<pantry:ProductName>Pork</pantry:ProductName>
+				<pantry:Stock Units="kg">3.0</pantry:Stock>
+				<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
+				<pantry:Location IsCold="true">Fridge</pantry:Location>
+			</pantry:Product>
+		</pantry:Category>
+	</pantry:Categories>
 
-	<pantry:Price>
-		<pantry:Name>Veal</pantry:Name>
-		<pantry:Value Size="1.0" Units="kg">15.0</pantry:Value>
-	</pantry:Price>
+	<pantry:Prices>
+		<pantry:Price>
+			<pantry:PriceName>Leek</pantry:PriceName>
+			<pantry:Value Size="1.0" Units="kg">5.0</pantry:Value>
+		</pantry:Price>
 
-	<pantry:Recipe>
-		<pantry:RecipeName>Cheesecake</pantry:RecipeName>
-		<pantry:Ingredients>
-			<pantry:IngredientName>Cheese</pantry:IngredientName>
-			<pantry:Stock Units="kg">2.0</pantry:Stock>
-		</pantry:Ingredients>
-		<pantry:Ingredients>
-			<pantry:IngredientName>Flour</pantry:IngredientName>
-			<pantry:Stock Units="kg">5.0</pantry:Stock>
-		</pantry:Ingredients>
-		<pantry:PreparationT>01:00:00</pantry:PreparationT>
-	</pantry:Recipe>
+		<pantry:Price>
+			<pantry:PriceName>Veal</pantry:PriceName>
+			<pantry:Value Size="1.0" Units="kg">10.0</pantry:Value>
+		</pantry:Price>
 
-	<pantry:Recipe>
-		<pantry:RecipeName>Chicken Soup</pantry:RecipeName>
-		<pantry:Ingredients>
-			<pantry:IngredientName>Chicken</pantry:IngredientName>
-			<pantry:Stock Units="kg">2.0</pantry:Stock>
-		</pantry:Ingredients>
-		<pantry:Ingredients>
-			<pantry:IngredientName>Pasta</pantry:IngredientName>
-			<pantry:Stock Units="kg">1.0</pantry:Stock>
-		</pantry:Ingredients>
-	</pantry:Recipe>
+		<pantry:Price>
+			<pantry:PriceName>Pork</pantry:PriceName>
+			<pantry:Value Size="1.0" Units="kg">15.15</pantry:Value>
+		</pantry:Price>
+
+		<pantry:Price>
+			<pantry:PriceName>Radish</pantry:PriceName>
+			<pantry:Value Size="1.0" Units="kg">20.25</pantry:Value>
+		</pantry:Price>
+	</pantry:Prices>
+
+	<pantry:Recipes>
+		<pantry:Recipe>
+			<pantry:RecipeName>Cheesecake</pantry:RecipeName>
+			<pantry:Ingredients>
+				<pantry:IngredientName>Cheese</pantry:IngredientName>
+				<pantry:Stock Units="kg">2.0</pantry:Stock>
+			</pantry:Ingredients>
+
+			<pantry:Ingredients>
+				<pantry:IngredientName>Flour</pantry:IngredientName>
+				<pantry:Stock Units="kg">5.0</pantry:Stock>
+			</pantry:Ingredients>
+			<pantry:PreparationT>01:00:00</pantry:PreparationT>
+		</pantry:Recipe>
+
+		<pantry:Recipe>
+			<pantry:RecipeName>Chicken Soup</pantry:RecipeName>
+			<pantry:Ingredients>
+				<pantry:IngredientName>Chicken</pantry:IngredientName>
+				<pantry:Stock Units="kg">2.0</pantry:Stock>
+			</pantry:Ingredients>
+
+			<pantry:Ingredients>
+				<pantry:IngredientName>Pasta</pantry:IngredientName>
+				<pantry:Stock Units="kg">1.0</pantry:Stock>
+			</pantry:Ingredients>
+		</pantry:Recipe>
+	</pantry:Recipes>
 
 	<pantry:Expenditure>
 		<pantry:Meals WeekNumber="w1">
 			<pantry:MealName>Cheesecake</pantry:MealName>
 			<pantry:MealName>Chicken Soup</pantry:MealName>
 		</pantry:Meals>
+
 		<pantry:Meals WeekNumber="w2">
 			<pantry:MealName>Cheesecake</pantry:MealName>
 			<pantry:MealName>Chicken Soup</pantry:MealName>
 		</pantry:Meals>
 	</pantry:Expenditure>
+
+	<pantry:Images>
+		<pantry:Image>
+			<pantry:ImageName>Leek</pantry:ImageName>
+			<pantry:URL URLFormat="DataURI"></pantry:URL>
+		</pantry:Image>
+
+		<pantry:Image>
+			<pantry:ImageName>Radish</pantry:ImageName>
+			<pantry:URL URLFormat="URI"></pantry:URL>
+		</pantry:Image>
+	</pantry:Images>
 </pantry:Pantry>

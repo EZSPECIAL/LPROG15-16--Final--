@@ -1,0 +1,34 @@
+﻿DUVIDAS:
+- preocupar com default em elements? (expiryDate, Stock, Value)
+- enumeration/pattern para Location?
+- assumir xml validado por xsd em transformaçoes xslt? (nomes duplicados, erros gerais que poderiam ser ignorados)
+- XSLT: falta de info no XML error checking? ou assumir XML completo? (ex: produto sem preço)
+- relatorio em geral
+- implementar defaults XSD no XSLT?
+
+---------------------------------
+
+1 			XML -> 100+ produtos
+1 			XSD
+min 5 	XSLT
+	- XML -> XML (min 2)
+	- XML -> HTML (min 3)
+
+---------------------------------
+
+lista compras para gasto semanal
+prejuizo caso produto fora de prazo
+investimento por categoria									HTML OK / XML X
+listagens
+
+---------------------------------
+
+http://stackoverflow.com/questions/13231385/xslt-programming-techniques (checking for node existence in XSLT)
+
+---------------------------------
+
+comment XSD
+location: enumeration or pattern?
+no empty strings / duplicate checking
+units: enumeration or pattern?
+investimento por categoria update
