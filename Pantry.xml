@@ -11,28 +11,28 @@
 				<pantry:ProductName>Leek</pantry:ProductName>
 				<pantry:Stock Units="kg">1.5</pantry:Stock>
 				<pantry:ExpiryDate>2015-03-24</pantry:ExpiryDate>
-				<pantry:Location>Pantry Shelf</pantry:Location>
+				<pantry:Location>Pantry shelf A</pantry:Location>
 			</pantry:Product>
 
 			<pantry:Product>
 				<pantry:ProductName>Leek</pantry:ProductName>
-				<pantry:Stock Units="kg">3.0</pantry:Stock>
+				<pantry:Stock Units="kg">2.0</pantry:Stock>
 				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+				<pantry:Location IsCold="false">Pantry shelf B</pantry:Location>
 			</pantry:Product>
 
 			<pantry:Product>
 				<pantry:ProductName>Radish</pantry:ProductName>
 				<pantry:Stock Units="kg">5.0</pantry:Stock>
 				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+				<pantry:Location IsCold="false">Pantry shelf C</pantry:Location>
 			</pantry:Product>
 
 			<pantry:Product>
 				<pantry:ProductName>Leek</pantry:ProductName>
 				<pantry:Stock Units="kg">1.0</pantry:Stock>
 				<pantry:ExpiryDate DateFormat="MM-DD-YYYY">03-24-2015</pantry:ExpiryDate>
-				<pantry:Location IsCold="false">Pantry Shelf</pantry:Location>
+				<pantry:Location IsCold="false">Pantry shelf A</pantry:Location>
 			</pantry:Product>
 		</pantry:Category>
 
@@ -56,7 +56,7 @@
 				<pantry:ProductName>Pork</pantry:ProductName>
 				<pantry:Stock Units="kg">3.0</pantry:Stock>
 				<pantry:ExpiryDate DateFormat="DD-MM-YYYY">24-03-2015</pantry:ExpiryDate>
-				<pantry:Location IsCold="true">Fridge</pantry:Location>
+				<pantry:Location IsCold="true">Freezer</pantry:Location>
 			</pantry:Product>
 		</pantry:Category>
 	</pantry:Categories>
@@ -87,12 +87,12 @@
 		<pantry:Recipe>
 			<pantry:RecipeName>Cheesecake</pantry:RecipeName>
 			<pantry:Ingredients>
-				<pantry:IngredientName>Cheese</pantry:IngredientName>
+				<pantry:IngredientName>Flour</pantry:IngredientName>
 				<pantry:Stock Units="kg">2.0</pantry:Stock>
 			</pantry:Ingredients>
 
 			<pantry:Ingredients>
-				<pantry:IngredientName>Flour</pantry:IngredientName>
+				<pantry:IngredientName>Cheese</pantry:IngredientName>
 				<pantry:Stock Units="kg">5.0</pantry:Stock>
 			</pantry:Ingredients>
 			<pantry:PreparationT>01:00:00</pantry:PreparationT>
@@ -101,7 +101,7 @@
 		<pantry:Recipe>
 			<pantry:RecipeName>Chicken Soup</pantry:RecipeName>
 			<pantry:Ingredients>
-				<pantry:IngredientName>Chicken</pantry:IngredientName>
+				<pantry:IngredientName>Flour</pantry:IngredientName>
 				<pantry:Stock Units="kg">2.0</pantry:Stock>
 			</pantry:Ingredients>
 
@@ -127,12 +127,12 @@
 	<pantry:Images>
 		<pantry:Image>
 			<pantry:ImageName>Leek</pantry:ImageName>
-			<pantry:URL URLFormat="DataURI"></pantry:URL>
+			<pantry:URL URLFormat="DataURI">a</pantry:URL>
 		</pantry:Image>
 
 		<pantry:Image>
 			<pantry:ImageName>Radish</pantry:ImageName>
-			<pantry:URL URLFormat="URI"></pantry:URL>
+			<pantry:URL>a</pantry:URL>
 		</pantry:Image>
 	</pantry:Images>
 </pantry:Pantry>

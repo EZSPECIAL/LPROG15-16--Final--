@@ -14,7 +14,7 @@ xmlns:pantry="http://isep.ipp.pt/1151007">
 			<body>
 				<table border="1">
 					<tr><th>Category</th><th>Investment</th></tr>
-					<xsl:apply-templates select="pantry:Category"/>
+					<xsl:apply-templates select="pantry:Categories/pantry:Category"/>
 				</table>
 			</body>
 		</html>
@@ -25,10 +25,10 @@ xmlns:pantry="http://isep.ipp.pt/1151007">
 		<xsl:variable name="totals">
 			<xsl:for-each select="pantry:Product/pantry:ProductName[not(.=../preceding-sibling::pantry:Product/pantry:ProductName)]">
 				<node>
-					<xsl:value-of select="//pantry:Price[pantry:Name = current()]/pantry:Value * count(//pantry:Product[pantry:ProductName = current()])"/>
+					<xsl:value-of select="//pantry:Price[pantry:PriceName = current()]/pantry:Value * count(//pantry:Product[pantry:ProductName = current()])"/>
 				</node>
 			</xsl:for-each>
 		</xsl:variable>
-		<td><xsl:value-of select="sum($totals/node)"/></td></tr>
+		<td><xsl:value-of select="sum($totals/node[. castable as xs:decimal])"/></td></tr>
 	</xsl:template>
 </xsl:stylesheet>

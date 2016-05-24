@@ -5,10 +5,22 @@
 		targetNamespace="http://isep.ipp.pt/1151007"
 		elementFormDefault="qualified">
 
+	<xs:simpleType name="LimitedString"> <!-- non empty string for usage on important elements that shouldn't be left empty -->
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="UnitsType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="unit|units|(k|m)?g|(c|m)?l"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:complexType name="StockType">
 		<xs:simpleContent>
 			<xs:extension base="xs:decimal">
-				<xs:attribute name="Units" type="xs:string" use="required"/>
+				<xs:attribute name="Units" type="pantry:UnitsType" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -19,7 +31,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="DateFormatType">
+	<xs:simpleType name="DateFormatType"> <!-- allows for all the date types used globally -->
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ISO8601"/>
 			<xs:enumeration value="DD-MM-YYYY"/>
@@ -35,9 +47,15 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
+	<xs:simpleType name="LimitedLocation">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Pantry shelf [A-Z]|Fridge|Freezer"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:complexType name="LocationType">
 		<xs:simpleContent>
-			<xs:extension base="xs:string">
+			<xs:extension base="pantry:LimitedLocation">
 				<xs:attribute name="IsCold" type="xs:boolean" use="optional" default="false"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -45,7 +63,7 @@
 
 	<xs:complexType name="ProductType">
 		<xs:sequence>
-			<xs:element name="ProductName" type="xs:string"/>
+			<xs:element name="ProductName" type="pantry:LimitedString"/>
 			<xs:element name="Stock" type="pantry:StockType"/>
 			<xs:element name="ExpiryDate" type="pantry:ExpiryType"/>
 			<xs:element name="Location" type="pantry:LocationType"/>
@@ -54,7 +72,7 @@
 
 	<xs:complexType name="CategoryType">
 		<xs:sequence>
-			<xs:element name="CategoryName" type="xs:string"/>
+			<xs:element name="CategoryName" type="pantry:LimitedString"/>
 			<xs:element name="Product" type="pantry:ProductType" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -69,14 +87,14 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:decimal">
 				<xs:attribute name="Size" type="xs:decimal" use="required"/>
-				<xs:attribute name="Units" type="xs:string" use="required"/>
+				<xs:attribute name="Units" type="pantry:UnitsType" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 
 	<xs:complexType name="PriceType">
 		<xs:sequence>
-			<xs:element name="PriceName" type="xs:string"/>
+			<xs:element name="PriceName" type="pantry:LimitedString"/>
 			<xs:element name="Value" type="pantry:ValueType"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -89,14 +107,14 @@
 
 	<xs:complexType name="IngredientsType">
 		<xs:sequence>
-			<xs:element name="IngredientName" type="xs:string"/>
+			<xs:element name="IngredientName" type="pantry:LimitedString"/>
 			<xs:element name="Stock" type="pantry:StockType"/>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="RecipeType">
 		<xs:sequence>
-			<xs:element name="RecipeName" type="xs:string"/>
+			<xs:element name="RecipeName" type="pantry:LimitedString"/>
 			<xs:element name="Ingredients" type="pantry:IngredientsType" minOccurs="1" maxOccurs="unbounded"/>
 			<xs:element name="PreparationT" type="xs:time" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
@@ -110,7 +128,7 @@
 
 	<xs:complexType name="MealsType">
 		<xs:sequence>
-			<xs:element name="MealName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="MealName" type="pantry:LimitedString" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="WeekNumber" type="xs:ID" use="required"/>
 	</xs:complexType>
@@ -124,14 +142,14 @@
 	<xs:simpleType name="URLFormatType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="DataURI"/> <!-- base64 encoded embeded image file -->
-			<xs:enumeration value="LocalFile"/> <!-- relative path to file on local disk -->
+			<xs:enumeration value="LocalFile"/> <!-- relative path to file on disk -->
 			<xs:enumeration value="URI"/> <!-- resource on server -->
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:complexType name="URLType">
 		<xs:simpleContent>
-			<xs:extension base="xs:string">
+			<xs:extension base="pantry:LimitedString">
 				<xs:attribute name="URLFormat" type="pantry:URLFormatType" use="optional" default="DataURI"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -139,7 +157,7 @@
 
 	<xs:complexType name="ImageType">
 		<xs:sequence>
-			<xs:element name="ImageName" type="xs:string"/>
+			<xs:element name="ImageName" type="pantry:LimitedString"/>
 			<xs:element name="URL" type="pantry:URLType"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -152,11 +170,31 @@
 
 	<xs:complexType name="PantryType">
 		<xs:sequence>
-			<xs:element name="Categories" type="pantry:CategoriesType"/>
-			<xs:element name="Prices" type="pantry:PricesType"/>
-			<xs:element name="Recipes" type="pantry:RecipesType"/>
+			<xs:element name="Categories" type="pantry:CategoriesType">
+				<xs:unique name="UniqueCategories"> <!-- ensure no duplicate categories by checking CategoryName -->
+					<xs:selector xpath="pantry:Category"/>
+					<xs:field xpath="pantry:CategoryName"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="Prices" type="pantry:PricesType">
+				<xs:unique name="UniquePrices"> <!-- ensure no duplicate prices by checking PriceName -->
+					<xs:selector xpath="pantry:Price"/>
+					<xs:field xpath="pantry:PriceName"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="Recipes" type="pantry:RecipesType">
+				<xs:unique name="UniqueRecipes"> <!-- ensure no duplicate recipes by checking RecipeName -->
+					<xs:selector xpath="pantry:Recipe"/>
+					<xs:field xpath="pantry:RecipeName"/>
+				</xs:unique>
+			</xs:element>
 			<xs:element name="Expenditure" type="pantry:ExpenditureType"/>
-			<xs:element name="Images" type="pantry:ImagesType"/>
+			<xs:element name="Images" type="pantry:ImagesType">
+				<xs:unique name="UniqueImages"> <!-- ensure no duplicate images by checking ImageName -->
+					<xs:selector xpath="pantry:Image"/>
+					<xs:field xpath="pantry:ImageName"/>
+				</xs:unique>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 

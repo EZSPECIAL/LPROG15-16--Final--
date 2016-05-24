@@ -1,12 +1,16 @@
-﻿DUVIDAS:
+﻿DUVIDAS
+
 - preocupar com default em elements? (expiryDate, Stock, Value)
 - enumeration/pattern para Location?
 - assumir xml validado por xsd em transformaçoes xslt? (nomes duplicados, erros gerais que poderiam ser ignorados)
-- XSLT: falta de info no XML error checking? ou assumir XML completo? (ex: produto sem preço)
+- XSLT: falta de info no XML error checking? ou assumir XML completo? (ex: produto sem preço, mealName sem receita correspondente)
 - relatorio em geral
 - implementar defaults XSD no XSLT?
+- verificar stock produto > tamanho de compra?
+- ingredientes nas receitas unique?
 
 ---------------------------------
+OBJETIVOS
 
 1 			XML -> 100+ produtos
 1 			XSD
@@ -15,6 +19,7 @@ min 5 	XSLT
 	- XML -> HTML (min 3)
 
 ---------------------------------
+XSLT
 
 lista compras para gasto semanal
 prejuizo caso produto fora de prazo
@@ -22,13 +27,37 @@ investimento por categoria									HTML OK / XML X
 listagens
 
 ---------------------------------
+INFO
 
 http://stackoverflow.com/questions/13231385/xslt-programming-techniques (checking for node existence in XSLT)
 
 ---------------------------------
+DATA STRUCTURE
+Categories		Category		CategoryName (pantry:LimitedString, Unique)
+										Product			ProductName (pantry:LimitedString)
+															Stock (xs:decimal)
+																		Units (pantry:UnitsType regex:"unit|units|(k|m)?g|(c|m)?l")
+															ExpiryDate (pantry:DateFormat, allows all 3 systems of dates)
+																		DateFormat (pantry:DateFormatType, optional, default ISO8601)
+															Location (pantry:LimitedLocation regex:"Pantry shelf [A-Z]|Fridge|Freezer")
+																		IsCold (xs:boolean, optional, default false)
+Prices			Price			PriceName (pantry:LimitedString, Unique)
+										Value (xs:decimal)
+														Size (xs:decimal, required)
+														Units (pantry:UnitsType regex:"unit|units|(k|m)?g|(c|m)?l")
+Recipes			Recipe			RecipeName (pantry:LimitedString, Unique)
+										Ingredients
+														IngredientName (pantry:LimitedString, NOT Unique)
+														Stock (xs:decimal)
+																		Units (pantry:UnitsType regex:"unit|units|(k|m)?g|(c|m)?l")
+Expenditure	Meals			MealName (pantry:LimitedString)
+										WeekNumber (xs:ID, required)
+Images			Images			ImageName (pantry:LimitedString, Unique)
+										URL (pantry:URLType)
+														URLFormat (enumeration, optional, default DataURI)
+														
+---------------------------------
+TODO
 
 comment XSD
-location: enumeration or pattern?
-no empty strings / duplicate checking
-units: enumeration or pattern?
-investimento por categoria update
+investment add format number
